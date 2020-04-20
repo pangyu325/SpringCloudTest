@@ -1,0 +1,12 @@
+server:
+  port: 8666
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9999/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: localhost:${server.port}
+spring:
+  application:
+    name: feign-client
